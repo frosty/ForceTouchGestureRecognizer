@@ -45,7 +45,7 @@ public class ForceTouchGestureRecognizer: UIGestureRecognizer {
         state = .Changed
       }
   
-      if touch.force > (touch.maximumPossibleForce * forceThreshold) {
+      if normalizedForce >= forceThreshold {
         state = .Ended
       }
     }
